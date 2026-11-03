@@ -1,272 +1,125 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@import "tailwindcss";
 
 body {
-    background-color: #102544;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #FFFFFF;
+  @apply bg-[#102544] text-white;
 }
 
 .capcalera {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    background-color: #0E2533;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    flex-wrap: wrap;
-    gap: 15px;
+  @apply flex items-center justify-between px-7 py-2.5 bg-[#0E2533] shadow-lg flex-wrap gap-4;
 }
 
 .logo {
-    width: 60px;
-    height: auto;
+  @apply w-15 h-auto;
 }
 
 .navegacio ul {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    list-style: none;
-    white-space: nowrap;
+  @apply flex items-center gap-4 list-none whitespace-nowrap;
 }
 
 .navegacio a {
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: #FFFFFF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.navegacio a:hover {
-    color: #E3BF3B;
+  @apply font-bold uppercase tracking-wider text-white hover:text-[#E3BF3B] transition-colors duration-300 text-sm;
 }
 
 .separador {
-    color: #E3BF3B;
-    opacity: 0.5;
-    font-size: 0.9rem;
+  @apply text-[#E3BF3B]/50 text-sm;
 }
 
 .cerca {
-    display: flex;
-    align-items: center;
+  @apply flex items-center;
 }
 
 .cerca-input {
-    height: 38px;
-    padding: 0 12px;
-    border: 1px solid #E3BF3B;
-    border-radius: 4px 0 0 4px;
-    background-color: #102544;
-    color: white;
-    outline: none;
+  @apply h-9 px-3 border border-[#E3BF3B] rounded-l bg-[#102544] text-white outline-none;
 }
 
 .boto-cerca {
-    height: 38px;
-    padding: 0 12px;
-    background: linear-gradient(135deg, #FFF099 0%, #E3BF3B 50%, #B38F19 100%);
-    color: #0E2533;
-    border: none;
-    border-radius: 0 4px 4px 0;
-    cursor: pointer;
+  @apply h-9 px-3 bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] rounded-r cursor-pointer border-0;
 }
 
 .usuari {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  @apply flex items-center gap-3;
 }
 
 .boto {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 38px;
-    font-family: 'Oswald', sans-serif;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg, #FFF099 0%, #E3BF3B 50%, #B38F19 100%);
-    color: #0E2533;
-    border: none;
-    border-radius: 5px;
-    padding: 0 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.boto:hover{
-    transform: scale(1.05);
+  @apply inline-flex items-center justify-center h-9 font-bold tracking-wider bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] rounded px-5 shadow-md cursor-pointer hover:scale-105 transition-transform duration-200 text-sm;
 }
 
 .contenidor {
-    width: 100%;
-    max-width: 1200px;
-    margin: 30px auto;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
+  @apply w-full max-w-6xl my-7 mx-auto px-5 flex flex-col gap-6;
 }
 
-/* FILA DE LES DUES TARGETES SUPERIORS */
 .fila {
-    display: flex;
-    gap: 20px;
-    width: 100%;
+  @apply flex gap-5 w-full;
 }
 
-/* TARGETES GENERALS */
 .targeta {
-    background-color: #0E2533;
-    border: 1px solid #E3BF3B;
-    border-radius: 8px;
-    padding: 1.5rem;
-    flex: 1;
-    width: 100%;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  @apply bg-[#0E2533] border border-[#E3BF3B] rounded-lg p-6 flex-1 w-full shadow-md;
 }
 
 .targeta h2 {
-    font-family: 'Oswald', sans-serif;
-    color: #E3BF3B;
-    font-size: 1.2rem;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    border-bottom: 1px solid rgba(227, 191, 59, 0.3);
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+  @apply text-[#E3BF3B] text-xl tracking-wider uppercase border-b border-[#E3BF3B]/30 pb-2.5 mb-5 font-bold;
 }
 
 .targeta-cos {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  @apply flex items-center gap-5;
 }
 
 .img-jugador {
-    width: 130px;
-    height: 180px;
-    object-fit: cover;
-    border: 2px solid rgba(227, 191, 59, 0.5);
-    border-radius: 8px;
-    background-color: #102544;
+  @apply w-32 h-44 object-cover border-2 border-[#E3BF3B]/50 rounded-lg bg-[#102544];
 }
 
-/* LLISTES DE RÀNQUING */
 .llista {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
+  @apply flex flex-col gap-2 w-full;
 }
 
 .element {
-    display: flex;
-    align-items: center;
-    padding: 8px 14px;
-    border-radius: 6px;
-    background-color: #102544;
-    border: 1px solid rgba(227, 191, 59, 0.2);
+  @apply flex items-center px-3.5 py-2 rounded-md bg-[#102544] border border-[#E3BF3B]/20;
 }
 
 .element.top-1 {
-    background-color: rgba(227, 191, 59, 0.15);
-    border: 1px solid #E3BF3B;
+  @apply bg-[#E3BF3B]/15 border-[#E3BF3B];
 }
 
 .num {
-    font-family: 'Oswald', sans-serif;
-    font-weight: 700;
-    color: #E3BF3B;
-    width: 35px;
-    font-size: 0.95rem;
+  @apply font-bold text-[#E3BF3B] w-9 text-sm;
 }
 
 .nom {
-    font-family: 'Oswald', sans-serif;
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
+  @apply text-white text-sm tracking-wide;
 }
 
 .top-1 .nom {
-    color: #FFF099;
+  @apply text-[#FFF099];
 }
 
 .dada {
-    margin-left: auto;
-    font-family: 'Oswald', sans-serif;
-    color: #E3BF3B;
-    font-size: 0.85rem;
-    font-weight: 700;
+  @apply ml-auto text-[#E3BF3B] text-xs font-bold;
 }
 
 .noticia-cos {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+  @apply flex items-center gap-5;
 }
 
 .img-noticia {
-    width: 180px;
-    height: 110px;
-    object-fit: cover;
-    border: 2px solid rgba(227, 191, 59, 0.5);
-    border-radius: 8px;
-    background-color: #102544;
+  @apply w-44 h-28 object-cover border-2 border-[#E3BF3B]/50 rounded-lg bg-[#102544];
 }
 
 .noticia-text h3 {
-    font-family: 'Oswald', sans-serif;
-    color: #FFF099;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+  @apply text-[#FFF099] text-xl mb-2 font-bold;
 }
 
 .noticia-text p {
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    line-height: 1.4;
+  @apply text-white text-sm leading-relaxed;
 }
 
 .escuts {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 10px 0;
+  @apply flex justify-around items-center flex-wrap gap-4 py-2.5;
 }
 
 .escuts img {
-    width: 45px;
-    height: 45px;
-    object-fit: contain;
-    transition: transform 0.2s ease;
-}
-
-.escuts img:hover {
-    transform: scale(1.15);
+  @apply w-11 h-11 object-contain transition-transform duration-200 hover:scale-115;
 }
 
 .peu-pagina {
-    background-color: #0E2533;
-    border-top: 1px solid #E3BF3B;
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: #E3BF3B;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
+  @apply bg-[#0E2533] border-t border-[#E3BF3B] text-center p-5 mt-10 text-[#E3BF3B] tracking-wider;
 }
