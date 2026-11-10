@@ -9,7 +9,7 @@ body > a{
 }
 
 .logo {
-  @apply w-22 h-auto mb-6 block;
+  @apply w-15 h-auto mb-6 block;
 }
 
 .contenidor-principal {
@@ -22,6 +22,10 @@ h1 {
 
 .contenidor-esquerra {
   @apply flex-1;
+}
+
+.links {
+  @apply flex gap-3 items-center;
 }
 
 .contenidor-dreta {
@@ -49,9 +53,9 @@ h1 {
 }
 
 .logo-dr{
-  @apply w-40 h-auto mx-auto;
+  @apply w-35 h-auto mx-auto;
 }
 
 .btn-iniciar{
-  @apply bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] cursor-pointer font-bold py-1 rounded w-35;
+  @apply bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] cursor-pointer font-bold py-1 rounded w-35 mt-3;
 }

@@ -8,8 +8,23 @@ body {
   @apply flex items-center justify-between px-7 py-2.5 bg-[#0E2533] shadow-lg flex-wrap gap-4;
 }
 
+h1 {
+  @apply text-[#E3BF3B] text-4xl font-bold text-center font-['Oswald'] my-12 tracking-wide;
+}
+
 .logo {
   @apply w-15 h-auto;
+}
+
+.banderas-titol{
+  @apply flex items-center gap-2;
+}
+
+.clasificacio{
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 w-full;}
+
+.banderas{
+  @apply w-8 h-auto;
 }
 
 .navegacio ul {
@@ -57,11 +72,11 @@ body {
 }
 
 .targeta h2 {
-  @apply text-[#E3BF3B] text-xl tracking-wider uppercase border-b border-[#E3BF3B]/30 pb-2.5 mb-5 font-bold;
+  @apply text-[#E3BF3B] text-xl tracking-wider border-b border-[#E3BF3B]/30 pb-2.5 mb-5 font-bold;
 }
 
 .targeta-cos {
-  @apply flex items-center gap-5;
+  @apply flex flex-col items-stretch gap-5 w-full;
 }
 
 .img-jugador {
@@ -73,7 +88,11 @@ body {
 }
 
 .element {
-  @apply flex items-center px-3.5 py-2 rounded-md bg-[#102544] border border-[#E3BF3B]/20;
+  @apply flex items-center gap-3 px-3.5 py-2 rounded-md bg-[#102544] border border-[#E3BF3B]/20 w-full;
+}
+
+.element img{
+  @apply w-6 h-6 
 }
 
 .element.top-1 {
@@ -85,7 +104,7 @@ body {
 }
 
 .nom {
-  @apply text-white text-sm tracking-wide;
+  @apply text-white text-sm tracking-wide truncate flex-1;
 }
 
 .top-1 .nom {
@@ -93,7 +112,7 @@ body {
 }
 
 .dada {
-  @apply ml-auto text-[#E3BF3B] text-xs font-bold;
+  @apply ml-auto text-[#E3BF3B] text-xs font-bold whitespace-nowrap;
 }
 
 .noticia-cos {

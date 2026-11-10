@@ -4,38 +4,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/output.css">
+  <meta name="description" content="Inicia sessió a la pàgina web">
+  <link rel="stylesheet" href="../css/output.css">
   <title>Login</title>
 </head>
 
 <body>
 
-  <a href="index.html">
-    <img class="logo" src="img/logo.png">
-  </a>
+  <header>
+    <a href="/index.html">
+      <img class="logo" src="../img/logo.webp" alt="Logo de la lliga">
+    </a>
+  </header>
 
-  <div class="contenidor-principal">
+  <main class="contenidor-principal">
     <h1>INICIAR SESSIÓ</h1>
-    <div class="contenidor-esquerra">
-      <img class="img-login" src="img/futbolista.png">
-    </div>
-    <div class="contenidor-dreta">
-      <form action="">
-        <label for="Email">E-mail</label>
-        <input type="email" name="email" required>
+    
+    <aside class="contenidor-esquerra">
+      <img class="img-login" src="../img/futbolista.webp" alt="Il·lustració d'un futbolista">
+    </aside>
+
+    <section class="contenidor-dreta">
+      <form action="#" method="POST">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required>
 
         <label for="contrasenya">Contrasenya</label>
-        <input type="password" name="psw" required>
-        
-        <button class="btn-iniciar">Iniciar Sessió</button>
+        <input type="password" id="contrasenya" name="psw" required>
 
-        <a href="/html/register.html">Crear compte</a>
-        
-        <img class="logo-dr" src="img/logo.png">
-        
+        <button type="submit" class="btn-iniciar">Iniciar Sessió</button>
+
+        <nav class="links" aria-label="Navegació del formulari">
+          <a href="/html/register.html">Crear compte</a>
+          <a href="/index.html">Tornar a l'inici</a>
+        </nav>
+
+        <img class="logo-dr" src="../img/logo.webp" alt="Logo secundari">
+
       </form>
-    </div>
-  </div>
+    </section>
+  </main>
 
 </body>
 

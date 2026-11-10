@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ca">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <meta name="description" content="Informació futbol actualitat">
+    <title>Pagina Principal</title>
     <link rel="stylesheet" href="css/output2.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
     <!-- CAPÇALERA -->
     <header class="capcalera">
-        <img class="logo" src="img/logo.png" alt="Logo">
+        <img class="logo" src="img/logo.webp" alt="Logo-pagina">
 
         <nav class="navegacio">
             <ul>
@@ -27,89 +30,91 @@
             </ul>
         </nav>
 
-        <div class="cerca">
-            <input type="text" class="cerca-input">
-            <button class="boto-cerca">🔎︎</button>
-        </div>
+        <form role="search" class="cerca">
+            <input type="search" class="cerca-input" aria-label="Cercar">
+            <button type="submit" class="boto-cerca" aria-label="Cercar">🔎︎</button>
+        </form>
 
-        <div class="usuari">
+        <nav class="usuari" aria-label="Accés d'usuari">
             <a href="/html/register.html" class="boto">REGISTRAT</a>
             <a href="/html/login.html" class="boto">INICIAR SESSIÓ</a>
-        </div>
+        </nav>
     </header>
+
+    <h1>INFORMACIÓ FUTBOL ACTUAL</h1>
 
     <main class="contenidor">
 
         <div class="fila">
-            
+
             <section class="targeta">
-                <h2>MÀXIMS GOLEJADORS</h2>
+                <h2>MÀXIMS GOLEJADORS 25-26</h2>
                 <div class="targeta-cos">
                     <img class="img-jugador" src="" alt="Foto Jugador">
-                    
-                    <div class="llista">
-                        <div class="element top-1">
+
+                    <ol class="llista">
+                        <li class="element top-1">
                             <span class="num">1</span>
                             <span class="nom">NOM JUGADOR 1</span>
                             <span class="dada">00 GOLS</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">2</span>
                             <span class="nom">NOM JUGADOR 2</span>
                             <span class="dada">00 GOLS</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">3</span>
                             <span class="nom">NOM JUGADOR 3</span>
                             <span class="dada">00 GOLS</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">4</span>
                             <span class="nom">NOM JUGADOR 4</span>
                             <span class="dada">00 GOLS</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">5</span>
                             <span class="nom">NOM JUGADOR 5</span>
                             <span class="dada">00 GOLS</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </section>
 
             <!-- ASSISTIDORS -->
             <section class="targeta">
-                <h2>MÀXIMS ASSISTIDORS</h2>
+                <h2>MÀXIMS ASSISTIDORS 25-26</h2>
                 <div class="targeta-cos">
                     <img class="img-jugador" src="" alt="Foto Jugador">
-                    
-                    <div class="llista">
-                        <div class="element top-1">
+
+                    <ol class="llista">
+                        <li class="element top-1">
                             <span class="num">1</span>
                             <span class="nom">NOM JUGADOR 1</span>
                             <span class="dada">00 ASSIST</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">2</span>
                             <span class="nom">NOM JUGADOR 2</span>
                             <span class="dada">00 ASSIST</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">3</span>
                             <span class="nom">NOM JUGADOR 3</span>
                             <span class="dada">00 ASSIST</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">4</span>
                             <span class="nom">NOM JUGADOR 4</span>
                             <span class="dada">00 ASSIST</span>
-                        </div>
-                        <div class="element">
+                        </li>
+                        <li class="element">
                             <span class="num">5</span>
                             <span class="nom">NOM JUGADOR 5</span>
                             <span class="dada">00 ASSIST</span>
-                        </div>
-                    </div>
+                        </li>
+                    </ol>
                 </div>
             </section>
 
@@ -118,28 +123,151 @@
         <!-- BLOC 2: NOTÍCIES -->
         <section class="targeta">
             <h2>NOTÍCIES DE LA JORNADA</h2>
-            <div class="noticia-cos">
+            <article class="noticia-cos">
                 <img class="img-noticia" src="" alt="Foto Notícia">
                 <div class="noticia-text">
                     <h3>TITULAR NOTÍCIA</h3>
                     <p>Cos notícia</p>
                 </div>
-            </div>
+            </article>
         </section>
 
-        <!-- BLOC 3: ESCUTS -->
+        <!-- BLOC 3: CLASSIFICACIÓ LLIGUES PRINCIPALS -->
+        <section class="clasificacio">
+            <section class="targeta">
+                <h2 class="banderas-titol">LALIGA 26-27
+                    <img class="banderas" src="./img/españa.webp" alt="bandera-españa">
+                </h2>
+                
+                <div class="targeta-cos">
+                    <ol class="llista">
+                        <li class="element top-1">
+                            <span class="num">1</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">2</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 2</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">3</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 3</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">4</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 4</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">5</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 5</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+
+            <section class="targeta">
+                <h2 class="banderas-titol">PREMIER LEAGUE 26-27
+                    <img class="banderas" src="./img/inglaterra.webp" alt="bandera-inglaterra">
+                </h2>
+                <div class="targeta-cos">
+                    <ol class="llista">
+                        <li class="element top-1">
+                            <span class="num">1</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 1</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">2</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 2</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">3</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 3</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">4</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 4</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">5</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 5</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+            <section class="targeta">
+                <h2 class="banderas-titol">SERIE A 26-27
+                    <img class="banderas" src="./img/italia.webp" alt="bandera-italia">
+                </h2>
+                <div class="targeta-cos">
+                    <ol class="llista">
+                        <li class="element top-1">
+                            <span class="num">1</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 1</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">2</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 2</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">3</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 3</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">4</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 4</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                        <li class="element">
+                            <span class="num">5</span>
+                            <img src="" alt="escut equip">
+                            <span class="nom">NOM EQUIP 5</span>
+                            <span class="dada">PUNTS EQUIP</span>
+                        </li>
+                    </ol>
+                </div>
+            </section>
+        </section>
+
+        <!-- BLOC 4: ESCUTS -->
         <section class="targeta">
             <h2>EQUIPS DE LA LLIGA</h2>
-            <div class="escuts">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-                <img src="" alt="Equip">
-            </div>
+            <ul class="escuts">
+                <li><img src="" alt="Equip 1"></li>
+                <li><img src="" alt="Equip 2"></li>
+                <li><img src="" alt="Equip 3"></li>
+                <li><img src="" alt="Equip 4"></li>
+                <li><img src="" alt="Equip 5"></li>
+                <li><img src="" alt="Equip 6"></li>
+                <li><img src="" alt="Equip 7"></li>
+                <li><img src="" alt="Equip 8"></li>
+            </ul>
         </section>
 
     </main>
@@ -150,4 +278,5 @@
     </footer>
 
 </body>
+
 </html>
