@@ -7,15 +7,18 @@
     <meta name="description" content="Informació futbol actualitat">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="css/output2.css">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Oswald:wght@600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- CAPÇALERA -->
     <header class="capcalera">
-        <img class="logo" src="img/logo.webp" alt="Logo-pagina">
-
+        <a href="index.html">
+            <img src="img/logo.webp" alt="Informació Futbol Actual - Inici" class="logo">
+        </a>
         <nav class="navegacio">
             <ul>
                 <li><a href="#">Inici</a></li>
@@ -31,7 +34,7 @@
         </nav>
 
         <form role="search" class="cerca">
-            <input type="search" class="cerca-input" aria-label="Cercar">
+            <input type="search" class="cerca-input" aria-label="Cercar jugadors o equips">
             <button type="submit" class="boto-cerca" aria-label="Cercar">🔎︎</button>
         </form>
 
@@ -138,7 +141,7 @@
                 <h2 class="banderas-titol">LALIGA 26-27
                     <img class="banderas" src="./img/españa.webp" alt="bandera-españa">
                 </h2>
-                
+
                 <div class="targeta-cos">
                     <ol class="llista">
                         <li class="element top-1">
@@ -274,7 +277,14 @@
 
     <!-- PEU DE PÀGINA -->
     <footer class="peu-pagina">
-        <p>FOOTER</p>
+        <nav class="peu-navegacio" aria-label="Navegació del peu de pàgina">
+            <a href="index.html">Inici</a>
+            <span aria-hidden="true">|</span>
+            <a href="html/login.html">Iniciar sessió</a>
+            <span aria-hidden="true">|</span>
+            <a href="html/register.html">Registra't</a>
+        </nav>
+        <p>&copy; 2026 Informació Futbol Actual - Oriol Fret</p>
     </footer>
 
 </body>

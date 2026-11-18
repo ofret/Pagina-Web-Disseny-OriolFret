@@ -1,61 +1,69 @@
 @import "tailwindcss";
 
 body {
-  @apply bg-[#102544] min-h-screen p-6 text-white;
+  @apply bg-[#102544] text-white min-h-screen flex flex-col justify-center py-6 px-4 relative;
 }
 
-body > a{
-  @apply inline-block;
+header {
+  @apply w-full px-4 mb-6 md:mb-0 md:fixed md:top-6 md:left-7 z-10;
+}
+
+header a {
+  @apply inline-block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFF099] rounded;
 }
 
 .logo {
-  @apply w-15 h-auto mb-6 block;
+  @apply w-16 h-auto hover:scale-105 transition-transform;
 }
 
 .contenidor-principal {
-  @apply bg-[#0E2533] border border-[#E3BF3B] rounded-lg p-6 max-w-4xl mx-auto shadow-lg flex flex-wrap gap-6;
+  @apply bg-[#0E2533] border border-[#E3BF3B]/60 rounded-xl p-8 max-w-4xl w-full mx-auto shadow-2xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center;
 }
 
 h1 {
-  @apply w-full text-[#E3BF3B] font-bold text-3xl border-b border-[#E3BF3B]/20 pb-2.5 mb-2 text-center;
+  @apply md:col-span-2 text-[#E3BF3B] font-['Oswald'] font-bold text-3xl tracking-wider border-b border-[#E3BF3B]/20 pb-4 mb-2 text-center uppercase;
 }
 
 .contenidor-esquerra {
-  @apply flex-1;
-}
-
-.links {
-  @apply flex gap-3 items-center;
-}
-
-.contenidor-dreta {
-  @apply flex-1 flex flex-col justify-center mr-10;
-}
-
-.contenidor-dreta form {
-  @apply flex flex-col gap-4;
-}
-
-.contenidor-dreta label {
-  @apply text-[#E3BF3B] font-bold text-lg -mb-2;
-}
-
-.contenidor-dreta input {
-  @apply bg-[#102544] border border-[#E3BF3B] rounded px-3 py-2 text-white outline-none focus:border-amber-300;
-}
-
-.contenidor-dreta a {
-  @apply text-[#E3BF3B] text-sm underline mt-2 self-start;
+  @apply w-full h-full;
 }
 
 .img-login {
-  @apply w-80 h-auto rounded-md object-cover;
+  @apply w-full h-56 md:h-[380px] rounded-xl object-cover border border-[#E3BF3B]/40 shadow-lg;
 }
 
-.logo-dr{
-  @apply w-35 h-auto mx-auto;
+.img-register {
+  @apply w-full h-full min-h-[450px] rounded-xl object-cover border border-[#E3BF3B]/40 shadow-lg;
 }
 
-.btn-iniciar{
-  @apply bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] cursor-pointer font-bold py-1 rounded w-35 mt-3;
+.contenidor-dreta {
+  @apply w-full flex flex-col justify-center;
+}
+
+.contenidor-dreta form {
+  @apply flex flex-col gap-4 w-full;
+}
+
+.contenidor-dreta label {
+  @apply text-[#E3BF3B] font-semibold text-sm uppercase tracking-wider -mb-1;
+}
+
+.contenidor-dreta input {
+  @apply w-full bg-[#102544] border border-[#E3BF3B] rounded-lg px-4 py-2.5 text-white placeholder:text-gray-300 outline-none focus:border-[#FFF099] focus:ring-2 focus:ring-[#FFF099] transition-all;
+}
+
+.btn-iniciar {
+  @apply w-full font-['Montserrat'] font-bold tracking-wide bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#061118] cursor-pointer uppercase py-3 rounded-lg shadow-md hover:brightness-110 transition-all mt-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
+}
+
+.links {
+  @apply flex justify-between items-center mt-1;
+}
+
+.contenidor-dreta a {
+  @apply inline-block py-1.5 px-2 text-[#E3BF3B]/80 hover:text-[#FFF099] text-xs underline transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFF099] rounded;
+}
+
+.logo-dr {
+  @apply w-32 h-auto mx-auto mt-3 opacity-95;
 }

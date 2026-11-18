@@ -3,34 +3,36 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Inicia sessió a la pàgina web">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Inicia Sessió a la pàgina web">
   <link rel="stylesheet" href="../css/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
   <title>Login</title>
 </head>
 
 <body>
 
   <header>
-    <a href="/index.html">
-      <img class="logo" src="../img/logo.webp" alt="Logo de la lliga">
+    <a href="../index.html">
+      <img src="../img/logo.webp" alt="Informació Futbol Actual - Inici" class="logo">
     </a>
   </header>
 
   <main class="contenidor-principal">
     <h1>INICIAR SESSIÓ</h1>
-    
+
     <aside class="contenidor-esquerra">
-      <img class="img-login" src="../img/futbolista.webp" alt="Il·lustració d'un futbolista">
+      <img class="img-login" src="../img/balon.webp" alt="Pilota de futbol a la gespa">
     </aside>
 
     <section class="contenidor-dreta">
       <form action="#" method="POST">
-        <label for="email">E-mail</label>
-        <input type="email" id="email" name="email" required>
+        <label for="login-email">E-mail</label>
+        <input type="email" id="login-email" name="email" autocomplete="email" required>
 
-        <label for="contrasenya">Contrasenya</label>
-        <input type="password" id="contrasenya" name="psw" required>
+        <label for="login-password">Contrasenya</label>
+        <input type="password" id="login-password" name="password" autocomplete="current-password" required>
 
         <button type="submit" class="btn-iniciar">Iniciar Sessió</button>
 
@@ -40,7 +42,6 @@
         </nav>
 
         <img class="logo-dr" src="../img/logo.webp" alt="Logo secundari">
-
       </form>
     </section>
   </main>

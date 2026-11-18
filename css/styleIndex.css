@@ -28,11 +28,11 @@ h1 {
 }
 
 .navegacio ul {
-  @apply flex items-center gap-4 list-none whitespace-nowrap;
+  @apply flex flex-wrap items-center gap-3 md:gap-4 list-none;
 }
 
 .navegacio a {
-  @apply font-bold uppercase tracking-wider text-white hover:text-[#E3BF3B] transition-colors duration-300 text-sm;
+  @apply inline-block py-1.5 px-2 font-bold uppercase tracking-wider text-white hover:text-[#E3BF3B] transition-colors duration-300 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFF099] rounded;
 }
 
 .separador {
@@ -40,23 +40,23 @@ h1 {
 }
 
 .cerca {
-  @apply flex items-center;
+  @apply flex items-center w-full sm:w-auto;
 }
 
 .cerca-input {
-  @apply h-9 px-3 border border-[#E3BF3B] rounded-l bg-[#102544] text-white outline-none;
+  @apply min-h-9 py-1.5 px-3 border border-[#E3BF3B] rounded-l bg-[#102544] text-white placeholder:text-gray-300 outline-none focus-visible:ring-2 focus-visible:ring-[#FFF099] w-full sm:w-auto min-w-0;
 }
 
 .boto-cerca {
-  @apply h-9 px-3 bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] rounded-r cursor-pointer border-0;
+  @apply min-h-9 py-1.5 px-3 bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#061118] rounded-r cursor-pointer border-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
 }
 
 .usuari {
-  @apply flex items-center gap-3;
+  @apply flex flex-wrap items-center gap-3;
 }
 
 .boto {
-  @apply inline-flex items-center justify-center h-9 font-bold tracking-wider bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#0E2533] rounded px-5 shadow-md cursor-pointer hover:scale-105 transition-transform duration-200 text-sm;
+  @apply inline-flex items-center justify-center min-h-9 py-2 font-['Montserrat'] font-bold tracking-wide bg-gradient-to-r from-[#FFF099] via-[#E3BF3B] to-[#B38F19] text-[#061118] rounded-md px-5 shadow-md cursor-pointer hover:scale-105 transition-transform duration-200 text-xs uppercase focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white;
 }
 
 .contenidor {
@@ -64,7 +64,7 @@ h1 {
 }
 
 .fila {
-  @apply flex gap-5 w-full;
+  @apply flex flex-col md:flex-row gap-5 w-full;
 }
 
 .targeta {
@@ -104,7 +104,7 @@ h1 {
 }
 
 .nom {
-  @apply text-white text-sm tracking-wide truncate flex-1;
+  @apply text-white text-sm tracking-wide break-words leading-snug flex-1;
 }
 
 .top-1 .nom {
@@ -116,11 +116,11 @@ h1 {
 }
 
 .noticia-cos {
-  @apply flex items-center gap-5;
+  @apply flex flex-col sm:flex-row items-start sm:items-center gap-5;
 }
 
 .img-noticia {
-  @apply w-44 h-28 object-cover border-2 border-[#E3BF3B]/50 rounded-lg bg-[#102544];
+  @apply w-full sm:w-44 h-40 sm:h-28 object-cover border-2 border-[#E3BF3B]/50 rounded-lg bg-[#102544];
 }
 
 .noticia-text h3 {
@@ -140,5 +140,17 @@ h1 {
 }
 
 .peu-pagina {
-  @apply bg-[#0E2533] border-t border-[#E3BF3B] text-center p-5 mt-10 text-[#E3BF3B] tracking-wider;
+  @apply bg-[#0E2533] border-t border-[#E3BF3B] text-center p-6 mt-10 text-[#E3BF3B] tracking-wider flex flex-col gap-3;
+}
+
+.peu-navegacio {
+  @apply flex justify-center items-center flex-wrap gap-2 text-xs uppercase font-semibold;
+}
+
+.peu-pagina a {
+  @apply inline-block py-1.5 px-2 underline cursor-pointer hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#FFF099] rounded;
+}
+
+.peu-pagina p {
+  @apply text-xs text-white/80;
 }
