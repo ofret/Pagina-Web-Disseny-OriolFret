@@ -32,14 +32,17 @@
         <input type="email" id="email" name="email" autocomplete="email" required>
 
         <label for="contrasenya">Contrasenya</label>
-        <input type="password" id="contrasenya" name="psw" autocomplete="new-password" minlength="8"
+        <input type="password" id="contrasenya" name="psw" autocomplete="new-password" 
+          minlength="8" maxlength="16" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).+"
+          title="Ha de ser entre 8 i 16 caràcters, una majúscula, una minúscula i un número"
           aria-describedby="ajuda-contrasenya" required>
-        <small id="ajuda-contrasenya" class="text-ajuda">Ha de tenir un mínim de 8 caràcters</small>
+        <small id="ajuda-contrasenya" class="text-ajuda">Ha de ser entre 8 i 16 caràcters</small>
+        <small id="ajuda-contrasenya" class="text-ajuda">Una majúscula, una minúscula i un número</small>
 
         <label for="c-contrasenya">Confirmar Contrasenya</label>
-        <input type="password" id="c-contrasenya" name="c-psw" autocomplete="new-password" minlength="8" required>
+        <input type="password" id="c-contrasenya" name="c-psw" autocomplete="new-password" required>
 
-        <button type="submit" class="btn-iniciar">Registra't</button>
+        <button type="submit" id="boto-reg" class="btn-iniciar">Registra't</button>
 
         <nav class="links" aria-label="Navegació del formulari">
           <a href="/html/login.html">Inicia sessió</a>
@@ -50,6 +53,8 @@
       </form>
     </section>
   </main>
+
+  <script src="/javaScript/comprovarReg.js"></script>
 
 </body>
 
