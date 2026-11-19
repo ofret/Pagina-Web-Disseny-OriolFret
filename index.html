@@ -19,16 +19,16 @@
         <a href="index.html">
             <img src="img/logo.webp" alt="Informació Futbol Actual - Inici" class="logo">
         </a>
-        <nav class="navegacio">
+        <nav class="navegacio" aria-label="Navegació principal">
             <ul>
                 <li><a href="#">Inici</a></li>
-                <li class="separador">|</li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="#">Partits</a></li>
-                <li class="separador">|</li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="#">Classificació</a></li>
-                <li class="separador">|</li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="#">Equips</a></li>
-                <li class="separador">|</li>
+                <li class="separador" aria-hidden="true">|</li>
                 <li><a href="#">Estadístiques</a></li>
             </ul>
         </nav>
@@ -38,9 +38,10 @@
             <button type="submit" class="boto-cerca" aria-label="Cercar">🔎︎</button>
         </form>
 
+        <!-- BOTONS DE LOGIN I REGISTRE -->
         <nav class="usuari" aria-label="Accés d'usuari">
-            <a href="/html/register.html" class="boto">REGISTRAT</a>
-            <a href="/html/login.html" class="boto">INICIAR SESSIÓ</a>
+            <a href="html/register.html" class="boto">REGISTRAT</a>
+            <a href="html/login.html" class="boto">INICIAR SESSIÓ</a>
         </nav>
     </header>
 
@@ -48,11 +49,12 @@
 
     <main class="contenidor">
 
-        <div class="fila">
+        <section class="fila" aria-label="Estadístiques destacades">
 
+            <!-- MÀXIMS GOLEJADORS 2025-2026 -->
             <section class="targeta">
                 <h2>MÀXIMS GOLEJADORS 25-26</h2>
-                <div class="targeta-cos">
+                <figure class="targeta-cos">
                     <img class="img-jugador" src="" alt="Foto Jugador">
 
                     <ol class="llista">
@@ -82,13 +84,13 @@
                             <span class="dada">00 GOLS</span>
                         </li>
                     </ol>
-                </div>
+                </figure>
             </section>
 
-            <!-- ASSISTIDORS -->
+            <!-- MÀXIMS ASSISTIDORS 2025-2026 -->
             <section class="targeta">
                 <h2>MÀXIMS ASSISTIDORS 25-26</h2>
-                <div class="targeta-cos">
+                <figure class="targeta-cos">
                     <img class="img-jugador" src="" alt="Foto Jugador">
 
                     <ol class="llista">
@@ -118,31 +120,32 @@
                             <span class="dada">00 ASSIST</span>
                         </li>
                     </ol>
-                </div>
+                </figure>
             </section>
 
-        </div>
+        </section>
 
         <!-- BLOC 2: NOTÍCIES -->
         <section class="targeta">
             <h2>NOTÍCIES DE LA JORNADA</h2>
             <article class="noticia-cos">
                 <img class="img-noticia" src="" alt="Foto Notícia">
-                <div class="noticia-text">
+                <hgroup class="noticia-text">
                     <h3>TITULAR NOTÍCIA</h3>
                     <p>Cos notícia</p>
-                </div>
+                </hgroup>
             </article>
         </section>
 
         <!-- BLOC 3: CLASSIFICACIÓ LLIGUES PRINCIPALS -->
-        <section class="clasificacio">
+        <!-- LLIGA ESPANYOLA -->
+        <section class="clasificacio" aria-label="Classificació de les lligues principals">
             <section class="targeta">
                 <h2 class="banderas-titol">LALIGA 26-27
                     <img class="banderas" src="./img/españa.webp" alt="bandera-españa">
                 </h2>
 
-                <div class="targeta-cos">
+                <section class="targeta-cos" aria-label="Classificació LaLiga">
                     <ol class="llista">
                         <li class="element top-1">
                             <span class="num">1</span>
@@ -175,14 +178,15 @@
                             <span class="dada">PUNTS EQUIP</span>
                         </li>
                     </ol>
-                </div>
+                </section>
             </section>
 
+            <!-- LLIGA ANGLESA -->
             <section class="targeta">
                 <h2 class="banderas-titol">PREMIER LEAGUE 26-27
                     <img class="banderas" src="./img/inglaterra.webp" alt="bandera-inglaterra">
                 </h2>
-                <div class="targeta-cos">
+                <section class="targeta-cos" aria-label="Classificació Premier League">
                     <ol class="llista">
                         <li class="element top-1">
                             <span class="num">1</span>
@@ -215,13 +219,15 @@
                             <span class="dada">PUNTS EQUIP</span>
                         </li>
                     </ol>
-                </div>
+                </section>
             </section>
+
+            <!-- LLIGA ITALIANA -->
             <section class="targeta">
                 <h2 class="banderas-titol">SERIE A 26-27
                     <img class="banderas" src="./img/italia.webp" alt="bandera-italia">
                 </h2>
-                <div class="targeta-cos">
+                <section class="targeta-cos" aria-label="Classificació Serie A">
                     <ol class="llista">
                         <li class="element top-1">
                             <span class="num">1</span>
@@ -254,7 +260,7 @@
                             <span class="dada">PUNTS EQUIP</span>
                         </li>
                     </ol>
-                </div>
+                </section>
             </section>
         </section>
 
@@ -275,7 +281,7 @@
 
     </main>
 
-    <!-- PEU DE PÀGINA -->
+    <!-- FOOTER -->
     <footer class="peu-pagina">
         <nav class="peu-navegacio" aria-label="Navegació del peu de pàgina">
             <a href="index.html">Inici</a>
